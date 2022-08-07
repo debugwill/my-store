@@ -10,6 +10,7 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartComponent } from './components/cart/cart.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CartComponent } from './components/cart/cart.component';
     ProductItemComponent,
     NavBarComponent,
     CartComponent,
+    ConfirmationComponent,
   ],
   imports: [
     BrowserModule,
