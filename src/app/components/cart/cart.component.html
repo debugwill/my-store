@@ -1,1 +1,13 @@
-<p>cart works!</p>
+<div class="cart-container">
+  <div class="cart-panel">
+    <div class="cart-item" *ngFor="let product of cartProducts">
+      <img src="{{ product.url }}" alt="{{ product.name }}">
+      <div class="cart-item-details">
+        <p>{{ product.name }}</p>
+        <p>${{ product.price }}</p>
+        <input type="number" name="quantity" [(ngModel)]="product.quantity">
+      </div>
+    </div>
+    <h3>Total: ${{ total }}</h3>
+  </div>
+</div>
