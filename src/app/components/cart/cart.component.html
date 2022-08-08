@@ -14,7 +14,7 @@
     <form (ngSubmit)="onSubmit()">
       <label>Full Name</label>
       <br>
-      <input type="text" placeholder="Enter your full name..." (ngModel)="name">
+      <input name="name" type="text" placeholder="Enter your full name..." [(ngModel)]="name">
       <br>
       <label>Address</label>
       <br>

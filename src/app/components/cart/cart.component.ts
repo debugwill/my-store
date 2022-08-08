@@ -24,11 +24,14 @@ export class CartComponent implements OnInit {
   }
 
   updateCart(product: Product): void {
-    this.cartService.updateQuantity(product.id, product.quantity);
     this.total = this.calculateCartTotal();
+    this.cartService.setCartTotal(this.total);
+    this.cartService.updateQuantity(product.id, product.quantity);
   }
 
   onSubmit(): void {
+    this.cartService.setCartOwner(this.name);
+    this.cartService.setCartTotal(this.total);
     this.router.navigate(['/confirmation', {name: this.name, total: this.total}]);
   }
 
