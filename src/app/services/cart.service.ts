@@ -6,11 +6,24 @@ import { Product } from '../models/product.model';
 })
 export class CartService {
   cartProducts: Product[] = [];
+  cartOwner: string;
+  cartTotal: number;
 
-  constructor() { }
+  constructor() {
+    this.cartOwner = '';
+    this.cartTotal = 0;
+  }
 
   getCartProducts(): Product[] {
     return this.cartProducts;
+  }
+
+  getCartOwner(): string {
+    return this.cartOwner;
+  }
+
+  getCartTotal(): number {
+    return this.cartTotal;
   }
 
   addProductToCart(product: Product): Product[] {
@@ -27,6 +40,14 @@ export class CartService {
     const productIndex = this.cartProducts.findIndex(p => p.id === productId);
     this.cartProducts[productIndex].quantity = newQuantity;
     return this.cartProducts;
+  }
+
+  setCartOwner(owner: string): void {
+    this.cartOwner = owner;
+  }
+
+  setCartTotal(total: number): void {
+    this.cartTotal = total;
   }
 
   clearCartProducts(): Product[] {
