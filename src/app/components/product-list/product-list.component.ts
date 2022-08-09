@@ -9,7 +9,6 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  title: string = 'Products';
   products: Product[] = [];
 
   constructor(private productService: ProductService, private cartService: CartService) { }
