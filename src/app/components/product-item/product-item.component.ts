@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 
 @Component({
@@ -13,15 +12,8 @@ export class ProductItemComponent implements OnInit {
   @Input() product: Product;
   @Output() addToCart: EventEmitter<Product> = new EventEmitter;
 
-  constructor(private router: Router) {
-    this.product = {
-      id: 0,
-      name: '',
-      price: 0,
-      url: '',
-      description: '',
-      quantity: 1
-    };
+  constructor() {
+    this.product = new Product();
     this.selectedQuantity = 1;
    }
 
