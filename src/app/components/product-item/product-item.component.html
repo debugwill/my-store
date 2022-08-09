@@ -1,6 +1,6 @@
 <form (ngSubmit)="onSubmit()">
   <div class="product-container">
-    <a routerLink="/{{ product.id }}">
+    <a routerLink="/product/{{ product.id }}">
       <img class="product-image" src="{{ product.url }}" alt="{{ product.name }}">
     </a>
     <p class="product-name">{{ product.name }}</p>

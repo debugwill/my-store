@@ -27,8 +27,6 @@ export class ProductItemDetailComponent implements OnInit {
     this.productService.getProducts().subscribe(data => {
       this.product = data.find(p => p.id === this.productId) as Product;
     });
-    console.log(this.productId);
-    console.log(this.product);
   }
 
 }

@@ -43,3 +43,8 @@ img {
   justify-content: center;
   margin-top: 64px;
 }
+
+.select-input {
+  width: 108px; 
+  margin-bottom: 8px;
+}
