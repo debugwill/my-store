@@ -3,9 +3,9 @@
     <a routerLink="/{{ product.id }}">
       <img class="product-image" src="{{ product.url }}" alt="{{ product.name }}">
     </a>
-    <p>{{ product.name }}</p>
+    <p class="product-name">{{ product.name }}</p>
     <p>${{ product.price}}</p>
-    <select name="quantity" [(ngModel)]="selectedQuantity">
+    <select class="select-input" name="quantity" [(ngModel)]="selectedQuantity">
       <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{ quantity }}</option>
     </select>
     <br>
