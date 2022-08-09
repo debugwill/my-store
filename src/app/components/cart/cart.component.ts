@@ -33,7 +33,7 @@ export class CartComponent implements OnInit {
   onSubmit(): void {
     this.cartService.setCartOwner(this.name);
     this.cartService.setCartTotal(this.total);
-    this.router.navigate(['/confirmation', {name: this.name, total: this.total}]);
+    this.router.navigate(['/confirmation']);
   }
 
   private calculateCartTotal(): number {

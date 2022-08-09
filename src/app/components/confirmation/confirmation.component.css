@@ -9,12 +9,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 
 .confirmation-header {
-  color: #33e5bc
+  color: #33e5bc;
+  font-size: 4em;
 }
 
 .confirmation-item {
   margin-bottom: 30px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.return-button {
+  margin-top: 20px;
 }
