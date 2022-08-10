@@ -16,22 +16,22 @@
     <h3>Total: ${{ total.toFixed(2) }}</h3>
   </div>
   <div class="form-margin">
-    <form (ngSubmit)="onSubmit()">
+    <form #orderForm="ngForm" (ngSubmit)="onSubmit()">
       <div fxLayout="column" fxLayoutGap="15">
         <div fxLayout="column" fxLayoutGap="5">
           <label>Full Name</label>
-          <input name="name" type="text" placeholder="Enter your full name..." [(ngModel)]="name">
+          <input type="text" name="name" required minlength="3" [(ngModel)]="name">
         </div>
         <div fxLayout="column" fxLayoutGap="5">
           <label>Address</label>
-          <input type="text" placeholder="Enter your address...">
+          <input type="text" name="address" required minlength="3" [(ngModel)]="address">
         </div>
         <div fxLayout="column" fxLayoutGap="5">
           <label>Credit Card Number</label>
-          <input type="text" placeholder="Credit card number...">
+          <input type="text" name="creditCard" required minlength="13" [(ngModel)]="creditCard">
         </div>
         <div>
-          <input class="btn btn-primary" type="submit" value="submit">
+          <input class="btn btn-primary" type="submit" value="submit" [disabled]="orderForm.invalid">
         </div>
       </div>
     </form>
