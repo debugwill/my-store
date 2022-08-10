@@ -1,4 +1,7 @@
-<div class="cart-container" fxLayout="row" fxLayoutGap="100">
+<div class="empty-cart-message" *ngIf="cartProducts.length === 0">
+  Your shopping cart is empty. Add products from the product list!
+</div>
+<div class="cart-container" fxLayout="row" fxLayoutGap="100" *ngIf="cartProducts.length > 0">
   <div class="cart-panel" fxLayout="column">
     <div class="cart-item" *ngFor="let product of cartProducts">
       <img src="{{ product.url }}" alt="{{ product.name }}">
