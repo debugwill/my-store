@@ -6,10 +6,10 @@
     <div class="product-name">{{ product.name }}</div>
     <div>{{ product.price }}</div>
     <div>{{ product.description }}</div>
-    <form>
+    <form (ngSubmit)="onSubmit()">
       <div>
-        <select class="select-input" name="quantity">
-          <option></option>
+        <select class="select-input" name="quantity" [(ngModel)]="selectedQuantity">
+          <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{ quantity }}</option>
         </select>
       </div>
       <div>
