@@ -30,6 +30,11 @@ export class CartComponent implements OnInit {
     this.cartService.updateQuantity(product.id, product.quantity);
   }
 
+  removeFromCart(id: number): void {
+    this.cartService.removeFromCart(id);
+    this.total = this.calculateCartTotal();
+  }
+
   onSubmit(): void {
     this.cartService.setCartOwner(this.name);
     this.cartService.setCartTotal(this.total);
