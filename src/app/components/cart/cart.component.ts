@@ -12,10 +12,14 @@ export class CartComponent implements OnInit {
   cartProducts: Product[] = [];
   total: number;
   name: string;
+  address: string;
+  creditCard: string;
 
   constructor(private cartService: CartService, private router: Router) {
     this.total = 0;
     this.name = '';
+    this.address = '';
+    this.creditCard = '';
   }
 
   ngOnInit(): void {
