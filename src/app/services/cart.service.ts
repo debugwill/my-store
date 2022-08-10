@@ -50,6 +50,12 @@ export class CartService {
     this.cartTotal = total;
   }
 
+  removeFromCart(id: number): Product[] {
+    const index = this.cartProducts.findIndex(p => p.id === id);
+    this.cartProducts.splice(index, 1);
+    return this.cartProducts;
+  }
+
   clearCartProducts(): Product[] {
     this.cartProducts = [];
     return this.cartProducts;
