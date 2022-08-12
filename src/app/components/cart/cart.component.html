@@ -31,7 +31,9 @@
         </div>
         <div fxLayout="column" fxLayoutGap="5">
           <label>Credit Card Number</label>
-          <input type="text" name="creditCard" required minlength="13" [(ngModel)]="creditCard">
+          <label class="hint">* Only accepts numbers</label>
+          <!-- pattern inspired from: https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
+          <input type="text" name="creditCard" pattern="[0-9]{13,19}" required [(ngModel)]="creditCard">
         </div>
         <div>
           <input class="btn btn-primary" type="submit" value="submit" [disabled]="orderForm.invalid">
