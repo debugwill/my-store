@@ -9,7 +9,7 @@
         <div>{{ product.name }}</div>
         <div>${{ product.price }}</div>
         <div>
-          <input class="select-input" type="number" name="quantity" [(ngModel)]="product.quantity" (ngModelChange)="updateCart(product)">
+          <input class="select-input" type="number" name="quantity" min="1" [(ngModel)]="product.quantity" (ngModelChange)="updateCart(product)">
         </div>
         <div>
           <button class="btn btn-primary" (click)="removeFromCart(product.id)">Remove</button>
