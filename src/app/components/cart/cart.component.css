@@ -48,3 +48,7 @@ img {
   width: 108px; 
   margin-bottom: 8px;
 }
+
+.hint {
+  font-size: x-small;
+}
